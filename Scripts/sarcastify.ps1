@@ -1,17 +1,14 @@
-$input = $args[0].ToLower()
-$splitinput = $input.ToCharArray()
+$input = $args[0].ToLower().ToCharArray()
 
 $upper = $TRUE
 
-For ($i=0; $i -le $splitinput.Length-1; $i++) {
-    if($splitinput[$i] -match '^[a-z]') {
+For ($i=0; $i -le $input.Length-1; $i++) {
+    if($input[$i] -match '^[a-z]') {
         if($upper) {
-            $splitinput[$i] = [char]::ToUpper($splitinput[$i]) 
+            $input[$i] = [char]::ToUpper($input[$i]) 
         }
         $upper = !$upper
     }
 }
 
-$splitinput -join ''
-
-Write-Host $output
+$input -join ''
