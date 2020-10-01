@@ -1,10 +1,10 @@
-$sentanceOne = Read-Host -Prompt 'What is the first sentance?'
-$sentanceTwo = Read-Host -Prompt 'What is the second sentance?'
+$sentenceOne = Read-Host -Prompt 'What is the first sentence?'
+$sentenceTwo = Read-Host -Prompt 'What is the second sentence?'
 
-$sentanceOneSplit = $sentanceOne.Split()
-$sentanceTwoSplit = $sentanceTwo.Split()
+$sentenceOneSplit = $sentenceOne.Split()
+$sentenceTwoSplit = $sentenceTwo.Split()
 
-$greaterLength = If ($sentanceOneSplit.Count -le $sentanceTwoSplit.Count) {$sentanceTwoSplit.Count} Else {$sentanceOneSplit.Count}
+$greaterLength = If ($sentenceOneSplit.Count -le $sentenceTwoSplit.Count) {$sentenceTwoSplit.Count} Else {$sentenceOneSplit.Count}
 
 $output = ''
 
@@ -12,7 +12,7 @@ $i = 0
 
 For ($i; $i -le $greaterLength; $i++) 
 {
-    $output = $output + $sentanceOneSplit[$i] + ' ' + $sentanceTwoSplit[$i] + ' '
+    $output = $output + $sentenceOneSplit[$i] + ' ' + $sentenceTwoSplit[$i] + ' '
 }
 
 $output
